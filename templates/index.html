@@ -25,7 +25,7 @@
 				its extension (eg. images/banner). Your video must be available in both .mp4 and .webm
 				formats to work correctly.
 			-->
-				<section id="banner" data-video="{{url_for('static',filename='images/food')}}">
+				<section id="banner" data-video="url({{url_for('static',filename='images/food')}})">
 					<div class="inner">
 						<header>
 							<h1>SeeFood</h1>
@@ -39,7 +39,7 @@
 						
 					<div class="inner">
 					<!-- Boxes -->
-					<form action='/predict' method="POST" enctype='multipart/form-data'>
+					<form action='/take' method="POST" enctype='multipart/form-data'>
 						
 						<div style="text-align:center">
 							<input type="file" accept="image/*" id="imgupload" name='photo' hidden>
@@ -56,29 +56,29 @@
 					<br>
 						<div class="thumbnails">
 							<div class="box">
-								<a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="{{url_for('static',filename='images/pic01.jpg')}}" alt="" /></a>
+								<a href="blog.html" class="image fit"><img src="{{url_for('static',filename='images/idly.jpg')}}" alt="" /></a>
 								<div class="inner">
 									<h3>A date with Idly</h3>
 									<p>Recently i had the privilege to go on a date with my taste buds. Read on to find more</p>
-									<a href="https://youtu.be/s6zR2T9vn2c" class="button fit" data-poptrox="youtube,800x400">Read</a>
+									<a href="{{url_for('render_blog')}}" class="button fit" data-poptrox="youtube,800x400">Read</a>
 								</div>
 							</div>
 
 							<div class="box">
-								<a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="{{url_for('static',filename='images/pic02.jpg')}}" alt="" /></a>
+								<a href="{{url_for('render_blog')}}" class="image fit"><img src="{{url_for('static',filename='images/oatmeal.jpg')}}" alt="" /></a>
 								<div class="inner">
 									<h3>My adventure with oat meal cookies</h3>
 									<p>Discover how i fell in love with nanny's home baked cookies</p>
-									<a href="https://youtu.be/s6zR2T9vn2c" class="button style2 fit" data-poptrox="youtube,800x400">Read</a>
+									<a href="{{url_for('render_blog')}}" class="button style2 fit" data-poptrox="youtube,800x400">Read</a>
 								</div>
 							</div>
 
 							<div class="box">
-								<a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="{{url_for('static',filename='images/pic03.jpg')}}" alt="" /></a>
+								<a href="{{url_for('render_blog')}}" class="image fit"><img src="{{url_for('static',filename='images/pizza4.jpg')}}" alt="" /></a>
 								<div class="inner">
-									<h3>Pizzas - A Timeless classic</h3>
-									<p>Pizza hut, Papa johns, Dominos - find out how i rate my experience with these food chains</p>
-									<a href="https://youtu.be/s6zR2T9vn2c" class="button style3 fit" data-poptrox="youtube,800x400">Read</a>
+									<h3>Pizza - A Timeless classic</h3>
+									<p>Pizza hut, Papa johns, Dominos - Find out how i rate my experience with popular these food chains</p>
+									<a href="{{url_for('render_blog')}}" class="button style3 fit" data-poptrox="youtube,800x400">Read</a>
 								</div>
 							</div>
 
